@@ -206,7 +206,7 @@ var Main = {
             },
             fetchData(){ //获取数据
             	var that = this;
-            	this.$http.get(that.getListUrl).then(function (resp) {
+            	this.$http.get(that.getListUrl+"?keyword=s").then(function (resp) {
                     that.tableData = resp.data.data;
                 }, function (error) {
                     alert("error");

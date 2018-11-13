@@ -23,7 +23,7 @@ import com.esen.rms.entity.Courseware;
 public class CoursewareDataAction {
 	
 	@RequestMapping(value="/list", method=RequestMethod.GET)
-	public String list(@RequestParam(name="keyword") String keyword,HttpServletRequest req, HttpServletResponse res) throws JSONException {
+	public String list(@RequestParam(name="keyword",required = false) String keyword,HttpServletRequest req, HttpServletResponse res) throws JSONException {
 		JSONObject jsonObject = new JSONObject();
 		Courseware gg = null;
 		List<Courseware> list = new ArrayList<Courseware>();

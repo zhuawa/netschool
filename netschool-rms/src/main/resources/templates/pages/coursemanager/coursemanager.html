@@ -15,32 +15,32 @@
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span>å¯¼èˆªä¸€</span>
+          <span>µ¼º½Ò»</span>
         </template>
         <el-menu-item-group>
-          <template slot="title">åˆ†ç»„ä¸€</template>
-          <el-menu-item index="1-1">é€‰é¡¹1</el-menu-item>
-          <el-menu-item index="1-2">é€‰é¡¹2</el-menu-item>
+          <template slot="title">·Ö×éÒ»</template>
+          <el-menu-item index="1-1">Ñ¡Ïî1</el-menu-item>
+          <el-menu-item index="1-2">Ñ¡Ïî2</el-menu-item>
         </el-menu-item-group>
-        <el-menu-item-group title="åˆ†ç»„2">
-          <el-menu-item index="1-3">é€‰é¡¹3</el-menu-item>
+        <el-menu-item-group title="·Ö×é2">
+          <el-menu-item index="1-3">Ñ¡Ïî3</el-menu-item>
         </el-menu-item-group>
         <el-submenu index="1-4">
-          <template slot="title">é€‰é¡¹4</template>
-          <el-menu-item index="1-4-1">é€‰é¡¹1</el-menu-item>
+          <template slot="title">Ñ¡Ïî4</template>
+          <el-menu-item index="1-4-1">Ñ¡Ïî1</el-menu-item>
         </el-submenu>
       </el-submenu>
       <el-menu-item index="2">
         <i class="el-icon-menu"></i>
-        <span slot="title">å¯¼èˆªäºŒ</span>
+        <span slot="title">µ¼º½¶ş</span>
       </el-menu-item>
       <el-menu-item index="3" disabled>
         <i class="el-icon-document"></i>
-        <span slot="title">å¯¼èˆªä¸‰</span>
+        <span slot="title">µ¼º½Èı</span>
       </el-menu-item>
       <el-menu-item index="4">
         <i class="el-icon-setting"></i>
-        <span slot="title">å¯¼èˆªå››</span>
+        <span slot="title">µ¼º½ËÄ</span>
       </el-menu-item>
     </el-menu>
   </el-col>
@@ -48,64 +48,64 @@
 </aside>
 <main class="el-main content">
 <el-breadcrumb separator="/">
-  <el-breadcrumb-item :to="{ path: '/' }">èµ„æºç®¡ç†</el-breadcrumb-item>
-  <el-breadcrumb-item><a href="/">è¯¾ä»¶ç®¡ç†</a></el-breadcrumb-item>
-  <el-breadcrumb-item>è¯¾ä»¶åˆ—è¡¨</el-breadcrumb-item>
+  <el-breadcrumb-item :to="{ path: '/' }">×ÊÔ´¹ÜÀí</el-breadcrumb-item>
+  <el-breadcrumb-item><a href="/">¿Î¼ş¹ÜÀí</a></el-breadcrumb-item>
+  <el-breadcrumb-item>¿Î¼şÁĞ±í</el-breadcrumb-item>
 </el-breadcrumb>
 
 <el-form :inline="true" :model="courseware" class="demo-form-inline" style="margin-top:30px">
-  <el-form-item label="è¯¾ä»¶åç§°">
-    <el-input v-model="courseware.name" placeholder="è¯¾ä»¶åç§°"></el-input>
+  <el-form-item label="¿Î¼şÃû³Æ">
+    <el-input v-model="courseware.name" placeholder="¿Î¼şÃû³Æ"></el-input>
   </el-form-item>
-  <el-form-item label="è¯¾ä»¶ç¼–å·">
-    <el-input v-model="courseware.number" placeholder="è¯¾ä»¶ç¼–å·"></el-input>
+  <el-form-item label="¿Î¼ş±àºÅ">
+    <el-input v-model="courseware.number" placeholder="¿Î¼ş±àºÅ"></el-input>
   </el-form-item>
-  <el-form-item label="å…³é”®å­—">
-    <el-input v-model="courseware.keyword" placeholder="å…³é”®å­—"></el-input>
+  <el-form-item label="¹Ø¼ü×Ö">
+    <el-input v-model="courseware.keyword" placeholder="¹Ø¼ü×Ö"></el-input>
   </el-form-item>
-  <el-form-item label="è¯¾ä»¶ç±»å‹">
-    <el-select v-model="courseware.type" placeholder="è¯¾ä»¶ç±»å‹">
-      <el-option label="SKæ ‡å‡†" value="sk"></el-option>
-      <el-option label="SCORMè¯¾ä»¶" value="scorm"></el-option>
+  <el-form-item label="¿Î¼şÀàĞÍ">
+    <el-select v-model="courseware.type" placeholder="¿Î¼şÀàĞÍ">
+      <el-option label="SK±ê×¼" value="sk"></el-option>
+      <el-option label="SCORM¿Î¼ş" value="scorm"></el-option>
     </el-select>
   </el-form-item>
   <el-form-item>
-  	<el-checkbox v-model="checked">ä¸å«å­ç›®å½•</el-checkbox>
+  	<el-checkbox v-model="checked">²»º¬×ÓÄ¿Â¼</el-checkbox>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">æŸ¥è¯¢</el-button>
+    <el-button type="primary" @click="onSubmit">²éÑ¯</el-button>
   </el-form-item>
 </el-form>
 
 <template>
   <el-table :data="tableData" style="width: 100%">
-    <el-table-column prop="number" label="è¯¾ä»¶ç¼–å·" width="180">
+    <el-table-column prop="number" label="¿Î¼ş±àºÅ" width="180">
     </el-table-column>
-    <el-table-column label="è¯¾ä»¶åç§°" width="180">
+    <el-table-column label="¿Î¼şÃû³Æ" width="180">
       <template slot-scope="scope">
         <el-popover trigger="hover" placement="top">
-          <p>ç¼–å·: {{ scope.row.number }}</p>
-          <p>åç§°: {{ scope.row.name }}</p>
+          <p>±àºÅ: {{ scope.row.number }}</p>
+          <p>Ãû³Æ: {{ scope.row.name }}</p>
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium">{{ scope.row.name }}</el-tag>
           </div>
         </el-popover>
       </template>
     </el-table-column>
-    <el-table-column prop="keyword" label="å…³é”®å­—" width="180">
+    <el-table-column prop="keyword" label="¹Ø¼ü×Ö" width="180">
     </el-table-column>
-    <el-table-column label="å­¦ä¹ æ—¶é—´(åˆ†é’Ÿ)" width="180">
+    <el-table-column label="Ñ§Ï°Ê±¼ä(·ÖÖÓ)" width="180">
       <template slot-scope="scope">
         <i class="el-icon-time"></i>
         <span style="margin-left: 10px">{{ scope.row.time }}</span>
       </template>
     </el-table-column>
-    <el-table-column prop="type" label="è¯¾ä»¶ç±»å‹" width="180">
+    <el-table-column prop="type" label="¿Î¼şÀàĞÍ" width="180">
     </el-table-column>
-    <el-table-column label="æ“ä½œ" width="180">
+    <el-table-column label="²Ù×÷" width="180">
       <template slot-scope="scope">
-        <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">ç¼–è¾‘</el-button>
-        <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">åˆ é™¤</el-button>
+        <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">±à¼­</el-button>
+        <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">É¾³ı</el-button>
       </template>
     </el-table-column>
   </el-table>
@@ -133,43 +133,43 @@ var Main = {
 	    	getListUrl: "http://localhost:8767/coursemanager/list",
 	    	total: 5,
             currentPage: 1,
-ã€€ã€€ã€€ã€€ã€€ã€€ã€€ 	pageSize: 10,
+¡¡¡¡¡¡¡¡¡¡¡¡¡¡ 	pageSize: 10,
         	checked: true,
-ã€€ã€€ã€€ã€€ã€€ã€€ã€€ 	courseware: {
-ã€€ã€€ã€€ã€€ã€€ã€€         	 	name: '',
-ã€€ã€€ã€€ã€€ã€€ã€€            	number: '',
+¡¡¡¡¡¡¡¡¡¡¡¡¡¡ 	courseware: {
+¡¡¡¡¡¡¡¡¡¡¡¡         	 	name: '',
+¡¡¡¡¡¡¡¡¡¡¡¡            	number: '',
                 keyword: ''
-ã€€ã€€ã€€ã€€ã€€ã€€           },
+¡¡¡¡¡¡¡¡¡¡¡¡           },
 	        tableData: [{
 	          number: '001',
-	          name: 'è¯¾ä»¶1',
+	          name: '¿Î¼ş1',
 	          time: '20',
-	          keyword: 'å…³é”®å­—1',
+	          keyword: '¹Ø¼ü×Ö1',
 	          type: 'sk'
 	        }, {
 	        	number: '002',
-		          name: 'è¯¾ä»¶2',
+		          name: '¿Î¼ş2',
 		          time: '20',
-		          keyword: 'å…³é”®å­—2',
+		          keyword: '¹Ø¼ü×Ö2',
 		          type: 'sk'
 	        }, {
 	        	number: '003',
-		          name: 'è¯¾ä»¶3',
+		          name: '¿Î¼ş3',
 		          time: '30',
-		          keyword: 'å…³é”®å­—3',
+		          keyword: '¹Ø¼ü×Ö3',
 		          type: 'sk'
 	        }, {
 	        	number: '004',
-		          name: 'è¯¾ä»¶4',
+		          name: '¿Î¼ş4',
 		          time: '40',
-		          keyword: 'å…³é”®å­—4',
+		          keyword: '¹Ø¼ü×Ö4',
 		          type: 'sk'
 	        }]
 	      }
 	    },
 	    created: function(){
-            // ç»„ä»¶åˆ›å»ºå®Œåè·å–æ•°æ®ï¼Œ
-            // æ­¤æ—¶ data å·²ç»è¢« observed äº†
+            // ×é¼ş´´½¨Íêºó»ñÈ¡Êı¾İ£¬
+            // ´ËÊ± data ÒÑ¾­±» observed ÁË
             this.fetchData();
         },
         methods: {
@@ -204,25 +204,25 @@ var Main = {
             onSubmit() {
                 console.log('submit!');
             },
-            fetchData(){ //è·å–æ•°æ®
+            fetchData(){ //»ñÈ¡Êı¾İ
             	var that = this;
             	this.$http.get(that.getListUrl).then(function (resp) {
                     that.tableData = resp.data.data;
                 }, function (error) {
                     alert("error");
                 });
-            	/* this.$http.jsonp(that.getListUrl ,{//è·¨åŸŸè¯·æ±‚æ•°æ®
+            	/* this.$http.jsonp(that.getListUrl ,{//¿çÓòÇëÇóÊı¾İ
             		method: 'GET',
                     params: {
-                        keyword:'s'//è¾“å…¥çš„å…³é”®è¯
+                        keyword:'s'//ÊäÈëµÄ¹Ø¼ü´Ê
                     }
-                    //jsonpCallback:'callbackFunction'//è¿™é‡Œæ˜¯callback
-                  }).then(function(res) {//è¯·æ±‚æˆåŠŸå›è°ƒï¼Œè¯·æ±‚æ¥çš„æ•°æ®èµ‹ç»™searchListæ•°ç»„
+                    //jsonpCallback:'callbackFunction'//ÕâÀïÊÇcallback
+                  }).then(function(res) {//ÇëÇó³É¹¦»Øµ÷£¬ÇëÇóÀ´µÄÊı¾İ¸³¸øsearchListÊı×é
                     this.total = res.body.count;
                     this.currentPage = res.body.curr;
                     this.tableData = res.body.data;
                     console.info(res);
-                  },function(res) {//å¤±è´¥æ˜¾ç¤ºçŠ¶æ€ç 
+                  },function(res) {//Ê§°ÜÏÔÊ¾×´Ì¬Âë
                     alert("res.status:"+res.status)
                   }) */
             }

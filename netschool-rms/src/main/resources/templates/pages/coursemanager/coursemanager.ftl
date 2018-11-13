@@ -206,7 +206,12 @@ var Main = {
             },
             fetchData(){ //获取数据
             	var that = this;
-            	this.$http.jsonp(that.getListUrl ,{//跨域请求数据
+            	this.$http.get(that.getListUrl).then(function (resp) {
+                    that.tableData = resp.data.data;
+                }, function (error) {
+                    alert("error");
+                });
+            	/* this.$http.jsonp(that.getListUrl ,{//跨域请求数据
             		method: 'GET',
                     params: {
                         keyword:'s'//输入的关键词
@@ -219,7 +224,7 @@ var Main = {
                     console.info(res);
                   },function(res) {//失败显示状态码
                     alert("res.status:"+res.status)
-                  })
+                  }) */
             }
         }
 }
