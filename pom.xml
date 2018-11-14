@@ -18,7 +18,7 @@
     </parent>
 
 	<modules>
-        <!--<module>netschool</module>-->
+        <module>netschool</module>
         <module>netschool-rms</module>
         <!--<module>netschool-live</module>-->
         <module>netschool-server</module>

@@ -13,7 +13,7 @@ public class TestAction {
     String port;
 
 	@GetMapping(value = "/hi",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public String home(@RequestParam(value="name") String name) {
+    public String home(@RequestParam(value="name", required=false) String name) {
 //        return "hi " + name + " ,i am from port:" + port;
 		return "index";
     }
