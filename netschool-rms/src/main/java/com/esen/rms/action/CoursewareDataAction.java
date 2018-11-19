@@ -23,17 +23,27 @@ import com.esen.rms.entity.Courseware;
 public class CoursewareDataAction {
 	
 	@RequestMapping(value="/list", method=RequestMethod.GET)
-	public String list(@RequestParam(name="keyword",required = false) String keyword,HttpServletRequest req, HttpServletResponse res) throws JSONException {
+	public String list(@RequestParam(name="keyword",required = false) String keyword, @RequestParam(name="pageNum",required = false) String pageNum, 
+				@RequestParam(name="pageSize",required = false) String pageSize, HttpServletRequest req, HttpServletResponse res) throws JSONException {
 		JSONObject jsonObject = new JSONObject();
 		Courseware gg = null;
+		int pNum = 0;
+		if(pageNum!=null && !"".equals(pageNum)) {
+			pNum = Integer.parseInt(pageNum);
+		}
+		int pSize = 10;
+		if(pageSize!=null && !"".equals(pageSize)) {
+			pSize = Integer.parseInt(pageSize);
+		}
 		List<Courseware> list = new ArrayList<Courseware>();
-		for(int i=0; i<20; i++) {
+		for(int i=(pNum-1)*pSize; i<pNum*pSize; i++) {
 			gg = new Courseware();
 			gg.setId(i+"");
 			gg.setNumber("number_"+i);
 			gg.setName("name_"+i);
 			gg.setTime("time_"+i);
 			gg.setType("type_"+i);
+			gg.setKeyword("关键字"+i);
 			list.add(gg);
 		}
 		JSONArray ja = new JSONArray(list);

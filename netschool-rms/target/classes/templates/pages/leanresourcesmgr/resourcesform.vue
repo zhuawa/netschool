@@ -10,7 +10,7 @@
 </div>
 </template>
 <script>
-Vue.component('resourcesForm', {
+export default {
 	data:function(){
 		return {
 			dialogTableVisible : true,
@@ -20,6 +20,20 @@ Vue.component('resourcesForm', {
 				address:'s'
 			}
 		}
-	}
-})
+	},
+	props:{
+            show:Boolean
+    },
+    watch:{
+    	dialogTableVisible: function(val, old){
+    		const self=this;
+    		self.dialogTableVisible = self.show;
+    	}
+    },
+    methods:{
+    	handleClick:function(){
+    		alert(this.show);
+    	}
+    }
+}
 </script>

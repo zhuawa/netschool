@@ -9,4 +9,5 @@ public class Courseware {
 	private String name;
 	private String time;
 	private String type;
+	private String keyword;
 }
