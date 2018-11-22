@@ -127,6 +127,13 @@
         <el-option label="SCORM课件" value="scorm"></el-option>
       </el-select>
     </el-form-item>
+    <el-form-item label="上传课件" :label-width="formLabelWidth">
+    	<el-upload class="upload-demo" drag action="https://jsonplaceholder.typicode.com/posts/" multiple>
+  			<i class="el-icon-upload"></i>
+  			<div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+  			<div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+		</el-upload>
+    </el-form-item>
   </el-form>
   <div slot="footer" class="dialog-footer">
     <el-button @click="dialogTableVisible = false">取 消</el-button>
@@ -146,37 +153,37 @@ var dirtree = new Vue({
 	data(){
 	const treeData = [{
         	id: 1,
-        	label: '一级 1',
+        	label: '增值税课件目录',
         	children: [{
           	id: 4,
-          	label: '二级 1-1',
+          	label: '增值税一般课件目录',
           	children: [{
             	id: 9,
-            	label: '三级 1-1-1'
+            	label: '减免税课件'
           	}, {
             	id: 10,
-            	label: '三级 1-1-2'
+            	label: '小规模课件'
           	}]
         	}]
       		}, {
         	id: 2,
-        	label: '一级 2',
+        	label: '印花税课件目录',
         	children: [{
           		id: 5,
-          		label: '二级 2-1'
+          		label: '印花税培训课件'
         	}, {
           		id: 6,
-          		label: '二级 2-2'
+          		label: '总结课件'
         		}]
       		}, {
         		id: 3,
-        		label: '一级 3',
+        		label: '所得税课件目录',
         	children: [{
           		id: 7,
-          		label: '二级 3-1'
+          		label: '个人所得税课件'
         	}, {
-          	id: 8,
-          	label: '二级 3-2'
+          		id: 8,
+          		label: '企业所得税课件'
         	}]
       	}];
 		return {

@@ -39,11 +39,11 @@ public class CoursewareDataAction {
 		for(int i=(pNum-1)*pSize; i<pNum*pSize; i++) {
 			gg = new Courseware();
 			gg.setId(i+"");
-			gg.setNumber("number_"+i);
-			gg.setName("name_"+i);
-			gg.setTime("time_"+i);
-			gg.setType("type_"+i);
-			gg.setKeyword("关键字"+i);
+			gg.setNumber("20181121A"+i);
+			gg.setName("课件"+i);
+			gg.setTime("50分钟");
+			gg.setType("ppt");
+			gg.setKeyword("课件");
 			list.add(gg);
 		}
 		JSONArray ja = new JSONArray(list);

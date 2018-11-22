@@ -1,3 +1,6 @@
-D:\schoolspace\netschool-parent\netschool-rms\src\main\java\com\esen\rms\RmsApplication.java
-D:\schoolspace\netschool-parent\netschool-rms\src\main\java\com\esen\rms\action\CoursewareAction.java
-D:\schoolspace\netschool-parent\netschool-rms\src\main\java\com\esen\rms\action\TestAction.java
+D:\openspace\netschool\netschool-rms\src\main\java\com\esen\rms\action\CoursewareDataAction.java
+D:\openspace\netschool\netschool-rms\src\main\java\com\esen\rms\action\LearnResourcesAction.java
+D:\openspace\netschool\netschool-rms\src\main\java\com\esen\rms\action\TestAction.java
+D:\openspace\netschool\netschool-rms\src\main\java\com\esen\rms\RmsApplication.java
+D:\openspace\netschool\netschool-rms\src\main\java\com\esen\rms\action\CoursewareAction.java
+D:\openspace\netschool\netschool-rms\src\main\java\com\esen\rms\entity\Courseware.java

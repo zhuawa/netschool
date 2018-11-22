@@ -157,37 +157,37 @@ var dirtree = new Vue({
 	data(){
 	const treeData = [{
         	id: 1,
-        	label: '一级 1',
+        	label: '安全规范',
         	children: [{
           	id: 4,
-          	label: '二级 1-1',
+          	label: '常用资源',
           	children: [{
             	id: 9,
-            	label: '三级 1-1-1'
+            	label: '税务资料'
           	}, {
             	id: 10,
-            	label: '三级 1-1-2'
+            	label: '治安管理'
           	}]
         	}]
       		}, {
         	id: 2,
-        	label: '一级 2',
+        	label: '手册',
         	children: [{
           		id: 5,
-          		label: '二级 2-1'
+          		label: 'OFFICE使用手册'
         	}, {
           		id: 6,
-          		label: '二级 2-2'
+          		label: '运维手册'
         		}]
       		}, {
         		id: 3,
-        		label: '一级 3',
+        		label: '运维资料',
         	children: [{
           		id: 7,
-          		label: '二级 3-1'
+          		label: '数据库资料'
         	}, {
-          	id: 8,
-          	label: '二级 3-2'
+          		id: 8,
+          		label: '中间件资料'
         	}]
       	}];
 		return {

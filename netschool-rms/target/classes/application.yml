@@ -20,6 +20,9 @@ spring:
     expose-spring-macro-helpers: false
     suffix: .ftl
     template-loader-path: classpath:/templates
+  profiles:
+    active:
+       no1
 ribbon:
    eureka:
     enabled: false
